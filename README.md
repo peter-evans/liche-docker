@@ -8,7 +8,7 @@ This image pins Liche to a specific SHA1 commit hash for reproducibility.
 
 # Supported tags and respective `Dockerfile` links
 
-- [`1.0.0`, `1.0`, `latest`  (*1.0/Dockerfile*)](https://github.com/peter-evans/liche-docker/tree/master)
+- [`1.0.1`, `1.0`, `latest`  (*1.0/Dockerfile*)](https://github.com/peter-evans/liche-docker/tree/master)
 
 ## License
 
