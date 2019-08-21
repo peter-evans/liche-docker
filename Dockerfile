@@ -9,7 +9,7 @@ RUN apk add --no-cache git \
  && CGO_ENABLED=0 GOOS=linux go get /go/src/github.com/raviqqe/liche
 
 
-FROM alpine:3.10.1
+FROM alpine:3.10.2
 
 LABEL \
   maintainer="Peter Evans <mail@peterevans.dev>" \
