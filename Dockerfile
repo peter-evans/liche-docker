@@ -2,11 +2,13 @@ FROM golang:1.13.5-alpine3.10 as builder
 
 ENV LICHE_VERSION e144e0808a750764fae36a79bad12e146effdd36
 
+ENV CGO_ENABLED=0 GO111MODULE=on GOOS=linux
+
 RUN apk add --no-cache git \
- && git clone https://github.com/raviqqe/liche.git /go/src/github.com/raviqqe/liche \
- && cd /go/src/github.com/raviqqe/liche \
+ && git clone https://github.com/raviqqe/liche.git \
+ && cd liche \
  && git reset --hard $LICHE_VERSION \
- && CGO_ENABLED=0 GOOS=linux go get /go/src/github.com/raviqqe/liche
+ && go build -o liche
 
 
 FROM alpine:3.10.3
@@ -24,6 +26,6 @@ COPY LICENSE README.md /
 
 RUN apk add --no-cache ca-certificates
 
-COPY --from=builder /go/bin/liche /usr/bin/liche
+COPY --from=builder /go/liche/liche /usr/bin/liche
 
 ENTRYPOINT ["liche"]
