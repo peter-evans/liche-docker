@@ -1,6 +1,6 @@
 FROM golang:1.13.5-alpine3.10 as builder
 
-ENV LICHE_VERSION 3b20c094c539eb403d232c48ae0d9c6210db5a61
+ENV LICHE_VERSION e144e0808a750764fae36a79bad12e146effdd36
 
 RUN apk add --no-cache git \
  && git clone https://github.com/raviqqe/liche.git /go/src/github.com/raviqqe/liche \
