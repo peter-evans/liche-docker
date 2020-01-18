@@ -11,7 +11,7 @@ RUN apk add --no-cache git \
  && go build -o liche
 
 
-FROM alpine:3.11.2
+FROM alpine:3.11.3
 
 LABEL \
   maintainer="Peter Evans <mail@peterevans.dev>" \
