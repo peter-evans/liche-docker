@@ -1,4 +1,4 @@
-FROM golang:1.13.6-alpine3.10 as builder
+FROM golang:1.13.7-alpine3.10 as builder
 
 ENV LICHE_VERSION e144e0808a750764fae36a79bad12e146effdd36
 
